@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Controle de Movimentação Financeira</title>
+     <!--BOOTSTRAP-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <!--FONTEAWESOME-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!--CSS-->
+     <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     
+     <!--container geral-->
+     <div class="centerColumn col-md-12 col-lg-4 container cover rounded shadow-lg mt-3 p-3 pb-5" id="cover">
+          <h1 class="mt-4 text-center text-dark">Controle de movimentação financeira</h1>
+          <img class="centerRow col-md-12 img mx-auto mb-2 rounded" src="/img/cover.jpg" alt="Logotipo da capa">
+          <button class="btn btn-block btn-primary btnVehicleButton mb-2" id="btnVehicleButton"><i class="fa-solid fa-car"></i> Despesa veicular</button>
+          <button class="btn btn-block btn-primary mb-2"><i class="fa-solid fa-coins"></i> Despesas pessoais</button>
+     </div>
+
+     <!--container input-->
+     <div class="container centerColumn col-md-12 col-lg-4 d-none dataInput rounded shadow-lg mt-3 p-3 pb-5" id="dataInput">
+          <div class="container row">
+               <label class="form-label my-2 text-secondary" for="">Despesa nº</label>
+               <input class="border form-control shadow" type="text">
+          </div>
+          <div class="container row">
+               <label class="form-label my-2 text-secondary" for="">Data da despesa</label>
+               <input class="border form-control shadow" type="text">
+          </div>
+          <div class="container row">
+               <label class="form-label my-2 text-secondary" for="">Tipo da despesa</label>
+               <select class="form-control" name="" id="">
+                    <option value="" disabled selected></option>
+                    <option value="">Alimentação</option>
+                    <option value="">Combustível</option>
+                    <option value="">Mecânico</option>
+                    <option value="">Multas</option>
+               </select>
+               <label class="form-label my-2 text-secondary" for="observations">Observaçóes</label>
+               <textarea class="form-control mb-2" name="" id="observations" cols="30" rows="4"></textarea>
+          </div>
+          <div class="container">
+               <label class="form-label my-2 text-secondary" for="observations">Valor</label>
+               <input class="form-control mb-2" name="" id="observations">
+          </div>
+          <div class="buttons container">
+               <button class="btn btn-block btn-primary mt-2"><i class="fa-regular fa-floppy-disk"></i> Registrar despesa</button>
+               <button class="btn btn-block btn-danger mb-2"><i class="fa-solid fa-pencil"></i> Editar dados</button>
+               <button class="btn btn-block btn-outline-danger mb-2" id="btnCloseDataInput"><i class="fa-solid fa-trash-can"></i> Cancelar</button>
+          </div>
+     </div>
+     
+
+
+     <!--JAVASCRIPT-->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     <script src="js/index.js" defer></script>
+</body>
+</html>
