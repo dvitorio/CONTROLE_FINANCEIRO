@@ -48,7 +48,7 @@ h1{
 .dataInput{
      backdrop-filter: blur(5px) !important;
      left: 50%;
-     min-height: auto !important;
+     min-height: 100vh !important;
      position: absolute;
      top: 50%;
      transform: translate(-50%, -50%);
