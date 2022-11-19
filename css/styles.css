@@ -7,6 +7,11 @@
      font-family: 'Montserrat', sans-serif;
 }
 
+body{
+     background-image: url('/img/background.jpg');
+     background-size: cover;
+}
+
 .centerRow{
      display: flex;
      align-items: center;
@@ -22,19 +27,30 @@
      flex-wrap: wrap;
 }
 
-.cover img{
-     max-width: 100% !important;
-     border-radius: 10px !important;
+.cover{
+     backdrop-filter: blur(5px) !important;
+     height: 50vh;
+     left: 50%;
+     min-width: 30vw;
+     position: absolute;
+     top: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.cover i{
+     font-size: 2rem;
 }
 
 h1{
-     font-size: 2rem !important;
+     font-size: 1.5rem !important;
 }
 
 .dataInput{
+     backdrop-filter: blur(5px) !important;
+     left: 50%;
+     min-height: 80vh !important;
      position: absolute;
      top: 50%;
-     left: 50%;
      transform: translate(-50%, -50%);
      z-index: 5;
 }
@@ -44,7 +60,7 @@ h1{
 
 @media screen and (min-width: 18rem) {
      h1{
-          font-size: 1.1rem;
+          font-size: 1rem;
      }
 }
 
