@@ -12,61 +12,79 @@
      <!--CSS-->
      <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="bg-dark">
      
-     <!--container geral-->
-     <div class="centerColumn col-md-12 col-lg-4 container cover rounded shadow-lg mt-3 p-3 pb-2" id="cover">
-          <i class="fa-solid fa-money-check-dollar text-white"></i>
-          <h1 class="mb-4 mt-2 text-center text-white">Controle de movimentação financeira</h1>
-          <button class="btn btn-block btn-primary btnVehicleButton mb-2 text-white" id="btnVehicleButton"><i class="fa-solid fa-car"></i> Despesa veicular</button>
-          <button class="btn btn-block btn-primary mb-2 text-white"><i class="fa-solid fa-coins"></i> Despesas pessoais</button>
-     </div>
+          <h1 class="mb-4 mt-2 text-center text-white" id="title">Controle de movimentação financeira</h1>
+          <div class="buttons col-sm-12 col-md-4 mx-auto" id="buttons">
+               <button class="bg-secondary btn btn-dark centerColumn mb-2 ml-2 mx-auto shadow-lg" id="btnPersonal"><i class="fa-solid fa-id-card mb-2"></i>  Despesas pessoais</button>
+               <button class="bg-secondary btn btn-dark centerColumn mb-2 ml-2 mx-auto shadow-lg" id="btnVehicular"><i class="fa-solid fa-car mb-2"></i>  Despesas veiculares</button>
+          </div>
 
-     <!--container input-->
-     <div class="container centerColumn col-md-12 col-lg-4 d-none dataInput rounded shadow-lg mt-3 p-3 pb-5" id="dataInput">
-          <div class="container row">
-               <label class="form-label my-2 text-white" for="">Despesa nº</label>
-               <input class="border form-control shadow" type="text">
-          </div>
-          <div class="container row">
-               <label class="form-label my-2 text-white" for="">Data da despesa</label>
-               <input class="border form-control shadow" type="text">
-          </div>
-          <div class="container row">
-               <label class="form-label my-2 text-white" for="">Tipo da despesa</label>
-               <select class="form-control" name="" id="">
-                    <option value="" disabled selected></option>
-                    <option value="" id="food">Alimentação</option>
-                    <option value="" id="fuel">Combustível</option>
-                    <option value="" id="ticket">Estacionamento</option>
-                    <option value="" id="wash">Lavagem</option>
-                    <option value="" id="mechanics">Mecânico</option>
-                    <option value="" id="ticketsTaxs">Multas</option>
-                    <option value="" id="others">Outras despesas</option>
-               </select>
-               <label class="form-label my-2 text-white" for="observations">Observaçóes</label>
-               <textarea class="form-control mb-2" name="" id="observations" cols="30" rows="4"></textarea>
-          </div>
-          <div class="container row">
-               <label class="form-label my-2 text-white" for="value">Valor</label>
-               <input class="form-control mb-2" name="" id="value">
-          </div>
-          <div class="container row">
-               <div class="col-md-6">
-                    <label class="form-label my-2 text-white" for="liquidValue">Total de receitas</label>
-                    <input class="form-control mb-2" name="" id="liquidValue">
+          <!--despesas pessoais-->
+          <div class="bg-secondary col-sm-12 col-lg-6 d-none mt-3 mx-auto p-3 vehicular" id="vehicular">
+               <div class="btnClose col">
+                    <i class="fa-solid fa-xmark" id="btnClose"></i>
                </div>
-               <div class="col-md-6">
-                    <label class="form-label my-2 text-white" for="profitValue">Lucro líquido</label>
-                    <input class="form-control mb-2" name="" id="profitValue">
+               <h4 class="text-center text-white mb-5">Despesas veiculares</h4>
+               <div class="row">
+                    <div class="col-md-4">
+                         <label class="form-label text-white" for="">Data da despesa</label>
+                         <input class="form-control" type="date" id="date">
+                    </div>
+                    <div class="col-md-4">
+                         <label class="form-label text-white" for="selectOptions">Tipo de despesa</label>
+                         <select class="form-control" name="" id="selectOptions">
+                              <option value=""></option>
+                              <option value="" id="fuel">Combustível</option>
+                              <option value="" id="parking">Estacionamento</option>
+                              <option value="" id="garage">Garagem</option>
+                              <option value="" id="mechanics">Mecânico</option>
+                              <option value="" id="toll">Multa</option>
+                              <option value="" id="ticket">Pedágio</option>
+                         </select>
+                    </div>
+                    <div class="col-md-4">
+                         <label class="form-label text-white" for="">Valor</label>
+                         <input class="form-control" type="value" placeholder="R$ 0,00" id="value">
+                    </div>
                </div>
+               <div class="row">
+                    <div class="col-md-2">
+                         <label class="form-label mt-2 text-white" for="kmBegin">Km inicial</label>
+                         <input class="form-control" type="text" id="kmBegin">
+                    </div>
+                    <div class="col-md-2">
+                         <label class="form-label mt-2 text-white" for="kmEnd">Km final</label>
+                         <input class="form-control" type="text" id="kmEnd">
+                    </div>
+                    <div class="col-md-4">
+                         <label class="form-label mt-2 text-white" for="pauseBegin">Início pausa</label>
+                         <input class="form-control" type="datetime-local" id="pauseBegin">
+                    </div>
+                    <div class="col-md-4">
+                         <label class="form-label mt-2 text-white" for="pauseEnd">Fim pausa</label>
+                         <input class="form-control" type="datetime-local" id="pauseEnd">
+                    </div>
+               </div>
+               <label class="form-label mt-2 my-2 text-white" for="">Detalhes da despesa</label>
+               <textarea class="form-control mb-2" name="" id="" cols="30" rows="3" placeholder="Outros detalhes..." id="message"></textarea>
+               <div class="row">
+                    <div class="closeButtons col-md-4">
+                         <button class="btn btn-block btn-primary my-2" id="btnSave"><i class="fa-regular fa-floppy-disk"></i> Salvar</button>
+                    </div>
+                    <div class="closeButtons col-md-4">
+                         <button class="btn btn-block btn-danger my-2" id="btnCancel"><i class="fa-solid fa-ban"></i> Cancelar</button>
+                    </div>
+               </div>
+               
           </div>
-          <div class="buttons container">
-               <button class="btn btn-block btn-primary mt-2"><i class="fa-regular fa-floppy-disk"></i> Registrar despesa</button>
-               <button class="btn btn-block btn-outline-danger mb-2 text-white"><i class="fa-solid fa-pencil"></i> Editar dados</button>
-               <button class="btn btn-block btn-outline-danger mb-2 text-white" id="btnCloseDataInput"><i class="fa-solid fa-trash-can"></i> Cancelar</button>
-          </div>
-     </div>
+
+          <h6 class="fixed-bottom text-center text-white">Desenvolvido por Daniel Vitorio</h6>
+
+     
+
+
+     
      
 
 

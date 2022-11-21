@@ -1,70 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 *{
-     margin: 0;
-     padding: 0;
      box-sizing: border-box;
      font-family: 'Montserrat', sans-serif;
+     margin: 0;
+     padding: 0;
 }
 
-body{
-     background-image: url('/img/background.jpg');
-     background-size: cover;
+.general{
+     max-width: 100vw !important;
+     max-height: 100vh !important;
+}
+
+.center{
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
 
 .centerRow{
-     display: flex;
      align-items: center;
-     justify-content: center;
+     display: flex;
      flex-wrap: nowrap;
+     justify-content: center;
 }
 
 .centerColumn{
-     display: flex;
      align-items: center;
-     justify-content: center;
+     display: flex;
      flex-direction: column;
      flex-wrap: wrap;
+     justify-content: center;
 }
 
-.cover{
-     backdrop-filter: blur(5px) !important;
-     height: 50vh;
-     left: 50%;
-     min-width: 30vw;
-     position: absolute;
-     top: 50%;
-     transform: translate(-50%, -50%);
+.buttons button{
+     border-radius: 10px !important;
+     min-height: 100px !important;
+     min-width: 250px !important;
 }
 
-.cover i{
-     font-size: 2rem;
+i, h1{
+     font-size: 1.75rem;
 }
 
-h1{
-     font-size: 1.5rem !important;
+.btnClose i{
+    color: lightgrey;
+    cursor: pointer;
+    margin-left: 97%;
 }
 
-.dataInput{
-     backdrop-filter: blur(5px) !important;
-     left: 50%;
-     min-height: 100vh !important;
-     position: absolute;
-     top: 50%;
-     transform: translate(-50%, -50%);
-     z-index: 5;
+.closeButtons i{
+     font-size: 1rem;
+}
+
+.vehicular{
+     display: block;
+     border-radius: 10px !important;
 }
 
 
 
-@media screen and (min-width: 18rem) {
-     h1{
-          font-size: 1rem;
-     }
-}
 
-@media screen and (max-width: 36rem) {
-     h1{
-          font-size: 2rem;
-     }
-}
+
