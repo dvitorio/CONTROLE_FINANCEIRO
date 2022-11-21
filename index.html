@@ -51,19 +51,37 @@
                <div class="row">
                     <div class="col-md-2">
                          <label class="form-label mt-2 text-white" for="kmBegin">Km inicial</label>
-                         <input class="form-control" type="text" id="kmBegin">
+                         <input class="form-control" type="number" id="kmBegin">
+                    </div>
+                    <div class="col-md-4">
+                         <label class="form-label mt-2 text-white" for="journeyBegin">Início jornada</label>
+                         <input class="form-control" type="datetime-local" id="journeyBegin">
                     </div>
                     <div class="col-md-2">
                          <label class="form-label mt-2 text-white" for="kmEnd">Km final</label>
-                         <input class="form-control" type="text" id="kmEnd">
+                         <input class="form-control" type="number" id="kmEnd">
                     </div>
                     <div class="col-md-4">
+                         <label class="form-label mt-2 text-white" for="journeyEnd">Fim jornada</label>
+                         <input class="form-control" type="datetime-local" id="journeyEnd">
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-3">
                          <label class="form-label mt-2 text-white" for="pauseBegin">Início pausa</label>
                          <input class="form-control" type="datetime-local" id="pauseBegin">
                     </div>
-                    <div class="col-md-4">
-                         <label class="form-label mt-2 text-white" for="pauseEnd">Fim pausa</label>
+                    <div class="col-md-3">
+                         <label class="form-label mt-2 text-white" for="kmBeginPausa">Km início pausa</label>
+                         <input class="form-control" type="number" id="kmBeginPausa">
+                    </div>
+                    <div class="col-md-3">
+                         <label class="form-label mt-2 text-white" for="pauseEnd">Final pausa</label>
                          <input class="form-control" type="datetime-local" id="pauseEnd">
+                    </div>
+                    <div class="col-md-3">
+                         <label class="form-label mt-2 text-white" for="kmEndPausa">Km final pausa</label>
+                         <input class="form-control" type="number" id="kmEndPausa">
                     </div>
                </div>
                <label class="form-label mt-2 my-2 text-white" for="">Detalhes da despesa</label>
