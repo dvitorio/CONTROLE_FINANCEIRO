@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 
 *{
      box-sizing: border-box;
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'Raleway', sans-serif;
      margin: 0;
      padding: 0;
 }
 
-.general{
-     max-width: 100vw !important;
-     max-height: 100vh !important;
+body{
+     min-height: auto !important;
 }
 
 .center{
@@ -49,13 +48,26 @@ i, h1{
     margin-left: 97%;
 }
 
-.closeButtons i{
+.closeButtons i, #btnClosePersonalExpenses{
+     cursor: pointer;
      font-size: 1rem;
 }
 
 .vehicular{
      display: block;
      border-radius: 10px !important;
+}
+
+.personalScreen, .personalExpenses{
+     border-radius: 10px !important;
+}
+
+.profits span, .expenses span{
+     font-size: 2.5rem;
+}
+
+.gain span{
+     font-size: 4rem;
 }
 
 
