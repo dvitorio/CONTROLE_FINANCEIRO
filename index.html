@@ -14,8 +14,8 @@
 </head>
 <body class="bg-dark">
      
-          <h1 class="d-none mb-4 text-center text-white" id="title">Controle de movimentação financeira</h1>
-          <div class="buttons col-sm-12 col-md-4 d-none mx-auto" id="buttons">
+          <h1 class="mb-4 text-center text-white" id="title">Controle de movimentação financeira</h1>
+          <div class="buttons col-sm-12 col-md-4 mx-auto" id="buttons">
                <button class="bg-secondary btn btn-dark centerColumn mb-2 ml-2 mx-auto shadow-lg" id="btnPersonal"><i class="fa-solid fa-id-card mb-2"></i>  Despesas pessoais</button>
                <button class="bg-secondary btn btn-dark centerColumn mb-2 ml-2 mx-auto shadow-lg" id="btnVehicular"><i class="fa-solid fa-car mb-2"></i>  Despesas veiculares</button>
           </div>
@@ -98,7 +98,7 @@
 
 
           <!--Formulário de despesas pessoais-->
-          <div class="bg-secondary col-xl-4 mt-3 mx-auto p-2 personalExpenses" id="personalExpenses">
+          <div class="bg-secondary col-xl-4 d-none mt-3 mx-auto p-2 personalExpenses" id="personalExpenses">
                <div class="row">
                     <div class="center col-sm-11">
                          <h4 class="text-center text-white">Despesas pessoais</h4>
@@ -133,16 +133,16 @@
                <label class="form-label my-2 text-center text-white" for="expenseDetails">Informações adicionais</label>
                <textarea class="form-control mb-2 mx-auto" name="" id="" cols="30" rows="3" id="expenseDetails"></textarea>
                <div class="row">
-                    <div class="col-sm-6">
-                         <button class="btn btn-block btn-primary my-2">Salvar despesa</button>
+                    <div class="buttonsExpenses col-sm-6">
+                         <button class="btn btn-block btn-primary my-2"><i class="fa-regular fa-floppy-disk"></i> Salvar despesa</button>
                     </div>
-                    <div class="col-sm-6">
-                         <button class="btn btn-block btn-danger my-2">Cancelar</button>
+                    <div class="buttonsExpenses col-sm-6">
+                         <button class="btn btn-block btn-danger my-2"><i class="fa-solid fa-ban"></i> Cancelar</button>
                     </div>
                </div>
           </div>
 
-          <!--Dashborda despesas pessoais-->
+          <!--Dashboard despesas pessoais-->
           <div class="bg-secondary col-sm-12 col-lg-6 d-none mt-3 mx-auto personalScreen p-3" id="personalScreen">
                <h4 class="text-center text-white">Relatório de despesas pessoais</h4>
                <div class="centerColumn row">

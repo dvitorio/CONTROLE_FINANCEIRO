@@ -48,7 +48,7 @@ i, h1{
     margin-left: 97%;
 }
 
-.closeButtons i, #btnClosePersonalExpenses{
+.closeButtons i, #btnClosePersonalExpenses, .buttonsExpenses i{
      cursor: pointer;
      font-size: 1rem;
 }
