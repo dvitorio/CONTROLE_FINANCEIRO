@@ -88,7 +88,7 @@
                <textarea class="form-control mb-2" name="" id="" cols="30" rows="3" placeholder="Outros detalhes..." id="message"></textarea>
                <div class="row">
                     <div class="closeButtons col-md-4">
-                         <button class="btn btn-block btn-primary my-2" id="btnSave"><i class="fa-regular fa-floppy-disk"></i> Salvar</button>
+                         <button class="btn btn-block btn-primary my-2" id="btnSaveVehicularExpenses"><i class="fa-regular fa-floppy-disk"></i> Salvar</button>
                     </div>
                     <div class="closeButtons col-md-4">
                          <button class="btn btn-block btn-danger my-2" id="btnCancel"><i class="fa-solid fa-ban"></i> Cancelar</button>
@@ -98,7 +98,7 @@
 
 
           <!--Formulário de despesas pessoais-->
-          <div class="bg-secondary col-xl-4 d-none mt-3 mx-auto p-2 personalExpenses" id="personalExpenses">
+          <div class="bg-secondary col-xl-6 d-none mt-3 mx-auto p-2 personalExpenses" id="personalExpenses">
                <div class="row">
                     <div class="center col-sm-11">
                          <h4 class="text-center text-white">Despesas pessoais</h4>
@@ -108,13 +108,14 @@
                     </div>
                </div>
                <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                          <label class="form-label mt-2 text-white" for="dateExpense">Data</label>
-                         <input class="form-control" type="date" id="dateExpense">
+                         <input class="form-control" type="datetime-local" id="dateExpense">
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                          <label class="form-label mt-2 text-white" for="typeExpense">Tipo</label>
                          <select class="form-control" name="" id="">
+                              <option value="" selected disabled></option>
                               <option value="">Alimentação</option>
                               <option value="">Combustível</option>
                               <option value="">Educação</option>
@@ -134,10 +135,10 @@
                <textarea class="form-control mb-2 mx-auto" name="" id="" cols="30" rows="3" id="expenseDetails"></textarea>
                <div class="row">
                     <div class="buttonsExpenses col-sm-6">
-                         <button class="btn btn-block btn-primary my-2"><i class="fa-regular fa-floppy-disk"></i> Salvar despesa</button>
+                         <button class="btn btn-block btn-primary my-2" id="btnSavePersonalExpenses"><i class="fa-regular fa-floppy-disk"></i> Salvar despesa</button>
                     </div>
                     <div class="buttonsExpenses col-sm-6">
-                         <button class="btn btn-block btn-danger my-2"><i class="fa-solid fa-ban"></i> Cancelar</button>
+                         <button class="btn btn-block btn-danger my-2"><i class="fa-solid fa-ban" id="btnCloseExpense"></i> Cancelar</button>
                     </div>
                </div>
           </div>
@@ -163,15 +164,8 @@
                </div>
 
           </div>
-
-
           <h6 class="fixed-bottom text-center text-white">Desenvolvido por Daniel Vitorio</h6>
 
-     
-
-
-     
-     
 
 
      <!--JAVASCRIPT-->
