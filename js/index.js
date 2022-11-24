@@ -1,61 +1,75 @@
-const title = document.getElementById('title');
-const btnClose = document.getElementById('btnClose');
-const btnPersonal = document.getElementById('btnPersonal');
-const btnVehicular = document.getElementById('btnVehicular');
-const vehicularScreen = document.getElementById('vehicular');
-const buttons = document.getElementById('buttons');
-const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
-const personalExpenses = document.getElementById('personalExpenses');
+//INICIALIZAÇÃO DAS VARIÁVEIS
+const btnCloseVehicularScreen = document.getElementById('btnCloseVehicularScreen');
+const confirmExpense = document.getElementById('confirmExpense');
+const btnConfirmExpense = document.getElementById('btnConfirmExpense');
+const btnCloseConfirmExpense = document.getElementById('btnCloseConfirmExpense');
+const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
 const btnClosePersonalExpenses = document.getElementById('btnClosePersonalExpenses');
+const btnPersonal = document.getElementById('btnPersonal');
 const btnSavePersonalExpenses = document.getElementById('btnSavePersonalExpenses');
+const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
+const btnVehicular = document.getElementById('btnVehicular');
+const buttons = document.getElementById('buttons');
+const personalExpenses = document.getElementById('personalExpenses');
+const title = document.getElementById('title');
+const vehicularScreen = document.getElementById('vehicular');
 
 
-//Open modal vehicular and close menu
+//OPEN MODAL VEHICULAR AND CLOSE MENU
 btnVehicular.onclick = ()=>{
      title.classList.add('d-none');
      vehicularScreen.classList.remove('d-none');
      buttons.classList.add('d-none');
 }
 
-//Close modal vehicular and open menu
-btnClose.onclick = ()=>{
+//CLOSE MODAL VEHICULAR AND OPEN MENU
+btnCloseVehicularScreen.onclick = ()=>{
      title.classList.remove('d-none');
      vehicularScreen.classList.add('d-none');
      buttons.classList.remove('d-none');
 }
 
-//Save datas and close modal vehicular 
+//SAVE DATAS AND CLOSE MODAL VEHICULAR
 btnSaveVehicularExpenses.onclick = ()=>{
      vehicularScreen.classList.add('d-none');
      buttons.classList.remove('d-none');
 }
 
-//Open modal personal expenses and close menu
+//OPEN MODAL PERSONAL EXPENSES AND CLOSE MENU
 btnPersonal.onclick = ()=>{
      personalExpenses.classList.remove('d-none');
      title.classList.add('d-none');
      buttons.classList.add('d-none');
 }
 
-//Close modal personal expenses and open menu
+//CLOSE MODAL PERSONAL EXPENSES AND OPEN MENU
 btnClosePersonalExpenses.onclick = ()=>{
      personalExpenses.classList.add('d-none');
      title.classList.remove('d-none');
      buttons.classList.remove('d-none');
 }
 
-//Save data on personal modal, require confirmation and reopen menu and page title
+//SAVE DATA ON PERSONAL MODAL, REQUIRES CONFIRMATION AND REOPEN MENU AND PAGE TITLE
 btnSavePersonalExpenses.onclick = ()=>{
-     let resp = confirm("Tem certeza que deseja salvar a despesa informada?", resp);
+     confirmExpense.classList.remove('d-none');
      personalExpenses.classList.add('d-none');
-     title.classList.remove('d-none');
-     buttons.classList.remove('d-none');
+     title.classList.add('d-none');
+     buttons.classList.add('d-none');
 }
 
-//Save data on vehicular modal, require confirmation and reopen menu and page title
+
+
+//SAVE DATA OND VEHICULAR MODAL, REQUIRE CONFIRMATION AND REOPEN MENU AND PAGE TITLE
 btnSaveVehicularExpenses.onclick = ()=>{
-     var resp = confirm("Tem certeza que deseja salvar a despesa informada?", resp);
+     confirmExpense.classList.remove('d-none');
      vehicularScreen.classList.add('d-none');
+     title.classList.add('d-none');
+     buttons.classList.add('d-none');
+}
+
+//CLOSE MODAL CONFIRM EXPENSE VEHICULAR
+btnConfirmExpense.onclick = ()=>{
+     confirmExpense.classList.add('d-none');
      title.classList.remove('d-none');
      buttons.classList.remove('d-none');
 }
