@@ -14,38 +14,47 @@
 </head>
 <body>
      
-          <h1 class=" d-none mb-4 text-center text-secondary" id="title">Controle de movimentação financeira</h1>
-          <div class="buttons col-sm-12 col-md-4 d-none  mx-auto" id="buttons">
+          <h1 class="mb-4 text-center text-secondary" id="title">Controle de movimentação financeira</h1>
+          <div class="buttons col-sm-12 col-md-4 mx-auto" id="buttons">
                <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnDebt"><i class="fa-solid fa-id-card mb-2"></i>  Quitação de dívidas</button>
                <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnVehicular"><i class="fa-solid fa-car mb-2"></i>  Despesas veiculares</button>
           </div>
 
-          <!--Formulário de empréstimos pessoais-->
-          <div class="bg-dark centerColumn col-md-6 col-xl-6 mt-5 mx-auto debts" id="debts">
-               <i class="fa-regular fa-credit-card mt-3 text-center text-white"></i>
-               <h5 class="text-center text-white mt-2 mb-3">Quitação de dívidas</h5>
+          <!--Formulário de busca de credores-->
+          <div class="col-xs-6 col-xl-6 debtSearch container d-none mt-3" id="debtSearch">
+               <img src="/img/holdhand.png" alt="" width="45">
+               <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Planejamento e quitação de empréstimos pessoais</h6>
                <div class="row">
-                    <div class="col-md-3">
-                         <label class="form-label mb-2 text-white" for="creditor">Credor</label>
-                         <input class="form-control mb-2" type="text" id="creditor">
+                    <div class="col-sm-7 col-lg-7 mb-3">
+                         <input class="form-control" type="text" id="btnSearch" placeholder="Nome do credor...">
                     </div>
-                    <div class="col-md-5">
-                         <label class="form-label mb-2 text-white" for="valueCredited">Valor contratado</label>
-                         <input class="form-control mb-2 text-center text-white" type="number" id="valueCredited">
+                    <div class="col-sm-3 col-lg-3 mb-3">
+                         <button class="btn btn-block btn-outline-primary" id="btnSearchDebt"><i class="fa-solid fa-magnifying-glass text-center"></i> Consultar</button>
                     </div>
-                    <div class="col-md-4">
-                         <label class="form-label mb-2 text-white" for="dateDebt">Data do empréstimo</label>
-                         <input class="form-control mb-2 text-center text-white" type="date" id="dateDebt">
+                    <div class="col-sm-2 col-lg-2 mb-3">
+                         <button class="btn btn-block btn-outline-danger text-center" placeholder="Nome do credor" id="btnCloseSearchDebt"><i class="fa-solid fa-xmark"></i> Sair</button>
                     </div>
                </div>
+          </div>
+
+          <!--Formulário de quitação de dívidas -->
+          <div class="col-xs-6 col-xl-6 container debtForm d-none mt-3" id="debtForm">
+               <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Quitação de dívidas</h6>
+               <label class="text-secondary" for="">Consulta credor</label>
                <div class="row">
-                    <div class="col-md-6">
-                         <button class="btn btn-block btn-primary mb-3">Calcular</button>
+                    <div class="col-sm-6">
+                         <input class="form-control mb-3" type="text" id="creditor" placeholder="Nome do credor">
                     </div>
-                    <div class="col-md-6">
-                         <button class="btn btn-block btn-danger mb-3">Cancelar</button>
+                    <div class="col-sm-3">
+                         <input class="form-control mb-3" type="number" id="valueDebt" placeholder="R$ 0,00">
+                    </div>
+                    <div class="col-sm-3">
+                         <input class="form-control mb-3" type="date" id="creditorName" placeholder="Nome do credor">
                     </div>
                </div>
+               <button class="btn btn-primary mb-3" id="btnSaveDebtForm">Cadastrar</button>
+               <button class="btn btn-outline-danger border-0 mb-3" id="btnCloseDebtForm">Cancelar</button>
+               
           </div>
           
 
@@ -136,6 +145,20 @@
                     </div>
                     <div class="col-md-6">
                          <button class="btn btn-block btn-outline-danger mb-2 shadow-md text-dark" id="btnCancelExpense">Cancelar</button>
+                    </div>
+               </div>
+          </div>
+
+          <!--alert confirm search-->
+          <div class="border centerColumn col-xl-4 confirmSearch d-none my-3 mx-auto p-2" id="confirmSearch">
+               <h5 class="text-center text-dark"><i class="fa-solid fa-money-bill-transfer my-2 text-dark"></i><b> Controle de Movimentação Financeira</b></h5>
+               <h6 class="my-3 text-center text-dark">Tem que certeza que deseja consultar esse credor?</h6>
+               <div class=" mb-3 row">
+                    <div class="col-md-6">
+                         <button class="btn btn-block btn-primary mb-2 shadow-md" id="btnConfirmSearch"><i class="fa-solid fa-check"></i> Confirmar</button>
+                    </div>
+                    <div class="col-md-6">
+                         <button class="btn btn-block btn-outline-danger mb-2 shadow-md text-dark" id="btnCancelSearch">Cancelar</button>
                     </div>
                </div>
           </div>

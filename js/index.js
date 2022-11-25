@@ -1,15 +1,17 @@
 //INICIALIZAÇÃO DAS VARIÁVEIS
-const btnCloseVehicularScreen = document.getElementById('btnCloseVehicularScreen');
-const confirmExpense = document.getElementById('confirmExpense');
-const btnConfirmExpense = document.getElementById('btnConfirmExpense');
-const btnCloseConfirmExpense = document.getElementById('btnCloseConfirmExpense');
 const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
+const btnCloseConfirmExpense = document.getElementById('btnCloseConfirmExpense');
+const btnCloseSearchDebt = document.getElementById('btnCloseSearchDebt');
+const btnCloseVehicularScreen = document.getElementById('btnCloseVehicularScreen');
+const btnConfirmExpense = document.getElementById('btnConfirmExpense');
+const btnDebt = document.getElementById('btnDebt');
 const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
+const btnSearchDebt = document.getElementById('btnSearchDebt');
 const btnVehicular = document.getElementById('btnVehicular');
 const buttons = document.getElementById('buttons');
+const confirmExpense = document.getElementById('confirmExpense');
 const title = document.getElementById('title');
 const vehicularScreen = document.getElementById('vehicular');
-
 
 //OPEN MODAL VEHICULAR AND CLOSE MENU
 btnVehicular.onclick = ()=>{
@@ -37,6 +39,19 @@ btnSaveVehicularExpenses.onclick = ()=>{
      vehicularScreen.classList.add('d-none');
      title.classList.add('d-none');
      buttons.classList.add('d-none');
+}
+
+//OPEN SEARCH DEBT
+btnDebt.onclick = ()=>{
+     debtSearch.classList.remove('d-none');
+     title.classList.add('d-none');
+     buttons.classList.add('d-none');
+}
+
+//CONFIRM AND CLOSE SEARCH DEBT
+btnSearchDebt.onclick = ()=>{
+     debtSearch.classList.add('d-none');
+     confirmExpense.classList.remove('d-none');
 }
 
 //CLOSE MODAL CONFIRM EXPENSE VEHICULAR

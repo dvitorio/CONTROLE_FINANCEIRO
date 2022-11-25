@@ -9,12 +9,13 @@
 
 body{
      background-color: #f6eded;
-     min-height: auto !important;
+     min-height: 100vh !important;
+     min-width: 100vw !important;
 }
 
 .center{
-     display: flex;
      align-items: center;
+     display: flex;
      justify-content: center;
 }
 
@@ -39,28 +40,35 @@ body{
      min-width: 250px !important;
 }
 
-i, h1{
-     font-size: 1.75rem;
+i{
+     cursor: pointer;
+     font-size: 1rem;
 }
 
-.btnClose i{
+#btnClose i{
     color: lightgrey;
     cursor: pointer;
     margin-left: 97%;
 }
 
-.closeButtons i, .confirmExpense i{
-     cursor: pointer;
-     font-size: 1rem;
-}
-
 .vehicular{
      background-color: #e2d5d5;
-     display: block;
      border-radius: 10px !important;
+     display: block;
 }
 
-.confirmExpense, .debts{
+.debtSearch, .debtForm{
+     background-color: rgb(218, 205, 205) !important;
+     border-radius: 8px !important;
+}
+
+.debtSearch img{
+     display: block;
+     padding-top: 15px;
+     margin: auto;
+}
+
+.confirmExpense{
      background-color: #e2d5d5;
      border-radius: 10px !important;
      box-shadow: 3px 6px 9px rgb(167, 163, 163);
