@@ -14,6 +14,7 @@
 </head>
 <body>
      
+          <!--Menu inicial-->
           <h1 class="mb-4 text-center text-secondary" id="title">Controle de movimentação financeira</h1>
           <div class="buttons col-sm-12 col-md-4 mx-auto" id="buttons">
                <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnDebt"><i class="fa-solid fa-id-card mb-2"></i>  Quitação de dívidas</button>
@@ -37,6 +38,7 @@
                </div>
           </div>
 
+
           <!--Formulário de quitação de dívidas -->
           <div class="col-xs-6 col-xl-6 container debtForm d-none mt-3" id="debtForm">
                <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Quitação de dívidas</h6>
@@ -52,8 +54,8 @@
                          <input class="form-control mb-3" type="date" id="creditorName" placeholder="Nome do credor">
                     </div>
                </div>
-               <button class="btn btn-primary mb-3" id="btnSaveDebtForm">Cadastrar</button>
-               <button class="btn btn-outline-danger border-0 mb-3" id="btnCloseDebtForm">Cancelar</button>
+               <button class="btn btn-primary mb-3" id="btnSaveDebtForm"><i class="fa-regular fa-floppy-disk"></i> Cadastrar</button>
+               <button class="btn btn-outline-danger mb-3" id="btnCloseDebtForm"><i class="fa-solid fa-xmark"></i> Cancelar</button>
                
           </div>
           
@@ -129,7 +131,10 @@
                          <button class="btn btn-block btn-primary my-2" id="btnSaveVehicularExpenses"><i class="fa-regular fa-floppy-disk"></i> Salvar</button>
                     </div>
                     <div class="closeButtons col-md-4">
-                         <button class="btn btn-block btn-danger my-2" id="btnCancel"><i class="fa-solid fa-ban"></i> Cancelar</button>
+                         <button class="btn btn-block btn-outline-secondary my-2" id="btnPrintVehicularExpenses"><i class="fa-solid fa-print"></i> Imprimir</button>
+                    </div>
+                    <div class="closeButtons col-md-4">
+                         <button class="btn btn-block btn-outline-danger my-2" id="btnCancel"><i class="fa-solid fa-ban"></i> Cancelar</button>
                     </div>
                </div>
           </div>

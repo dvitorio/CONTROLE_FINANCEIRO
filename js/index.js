@@ -1,11 +1,13 @@
 //INICIALIZAÇÃO DAS VARIÁVEIS
 const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
 const btnCloseConfirmExpense = document.getElementById('btnCloseConfirmExpense');
+const btnCloseDebtForm = document.getElementById('btnCloseDebtForm');
 const btnCloseSearchDebt = document.getElementById('btnCloseSearchDebt');
 const btnCloseVehicularScreen = document.getElementById('btnCloseVehicularScreen');
 const btnConfirmExpense = document.getElementById('btnConfirmExpense');
 const btnConfirmSearch = document.getElementById('btnConfirmSearch');
 const btnDebt = document.getElementById('btnDebt');
+const btnPrintVehicularExpenses = document.getElementById('btnPrintVehicularExpenses');
 const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
 const btnSearchDebt = document.getElementById('btnSearchDebt');
 const btnVehicular = document.getElementById('btnVehicular');
@@ -13,8 +15,23 @@ const buttons = document.getElementById('buttons');
 const confirmExpense = document.getElementById('confirmExpense');
 const confirmSearch = document.getElementById('confirmSearch');
 const debtForm = document.getElementById('debtForm');
+const debtSearch = document.getElementById('debtSearch');
 const title = document.getElementById('title');
 const vehicularScreen = document.getElementById('vehicular');
+
+//OPEN FORM DEBT 
+btnDebt.onclick = ()=>{
+     debtForm.classList.remove('d-none');
+     title.classList.add('d-none');
+     buttons.classList.add('d-none');
+}
+
+//CLOSE FORM DEBT
+btnCloseDebtForm.onclick = ()=>{
+     debtForm.classList.add('d-none');
+     title.classList.remove('d-none');
+     buttons.classList.remove('d-none');
+}
 
 //OPEN MODAL VEHICULAR AND CLOSE MENU
 btnVehicular.onclick = ()=>{
@@ -44,8 +61,13 @@ btnSaveVehicularExpenses.onclick = ()=>{
      buttons.classList.add('d-none');
 }
 
+//PRINT DATAS FROM FORM EXPENSES
+btnPrintVehicularExpenses.onclick = ()=>{
+     vehicularScreen.print();
+}
+
 //OPEN SEARCH DEBT
-btnDebt.onclick = ()=>{
+btnSearchDebt.onclick = ()=>{
      debtSearch.classList.remove('d-none');
      title.classList.add('d-none');
      buttons.classList.add('d-none');
