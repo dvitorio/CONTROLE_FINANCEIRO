@@ -4,13 +4,9 @@ const confirmExpense = document.getElementById('confirmExpense');
 const btnConfirmExpense = document.getElementById('btnConfirmExpense');
 const btnCloseConfirmExpense = document.getElementById('btnCloseConfirmExpense');
 const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
-const btnClosePersonalExpenses = document.getElementById('btnClosePersonalExpenses');
-const btnPersonal = document.getElementById('btnPersonal');
-const btnSavePersonalExpenses = document.getElementById('btnSavePersonalExpenses');
 const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
 const btnVehicular = document.getElementById('btnVehicular');
 const buttons = document.getElementById('buttons');
-const personalExpenses = document.getElementById('personalExpenses');
 const title = document.getElementById('title');
 const vehicularScreen = document.getElementById('vehicular');
 
@@ -34,30 +30,6 @@ btnSaveVehicularExpenses.onclick = ()=>{
      vehicularScreen.classList.add('d-none');
      buttons.classList.remove('d-none');
 }
-
-//OPEN MODAL PERSONAL EXPENSES AND CLOSE MENU
-btnPersonal.onclick = ()=>{
-     personalExpenses.classList.remove('d-none');
-     title.classList.add('d-none');
-     buttons.classList.add('d-none');
-}
-
-//CLOSE MODAL PERSONAL EXPENSES AND OPEN MENU
-btnClosePersonalExpenses.onclick = ()=>{
-     personalExpenses.classList.add('d-none');
-     title.classList.remove('d-none');
-     buttons.classList.remove('d-none');
-}
-
-//SAVE DATA ON PERSONAL MODAL, REQUIRES CONFIRMATION AND REOPEN MENU AND PAGE TITLE
-btnSavePersonalExpenses.onclick = ()=>{
-     confirmExpense.classList.remove('d-none');
-     personalExpenses.classList.add('d-none');
-     title.classList.add('d-none');
-     buttons.classList.add('d-none');
-}
-
-
 
 //SAVE DATA OND VEHICULAR MODAL, REQUIRE CONFIRMATION AND REOPEN MENU AND PAGE TITLE
 btnSaveVehicularExpenses.onclick = ()=>{

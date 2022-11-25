@@ -14,78 +14,40 @@
 </head>
 <body>
      
-          <h1 class="mb-4 text-center text-secondary" id="title">Controle de movimentação financeira</h1>
-          <div class="buttons col-sm-12 col-md-4 mx-auto" id="buttons">
-               <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnPersonal"><i class="fa-solid fa-id-card mb-2"></i>  Despesas pessoais</button>
+          <h1 class=" d-none mb-4 text-center text-secondary" id="title">Controle de movimentação financeira</h1>
+          <div class="buttons col-sm-12 col-md-4 d-none  mx-auto" id="buttons">
+               <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnDebt"><i class="fa-solid fa-id-card mb-2"></i>  Quitação de dívidas</button>
                <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnVehicular"><i class="fa-solid fa-car mb-2"></i>  Despesas veiculares</button>
           </div>
 
-          <!--Formulário de despesas pessoais-->
-          <div class="col-xl-6 d-none mt-3 mx-auto p-3 personalExpenses" id="personalExpenses">
+          <!--Formulário de empréstimos pessoais-->
+          <div class="bg-dark centerColumn col-md-6 col-xl-6 mt-5 mx-auto debts" id="debts">
+               <i class="fa-regular fa-credit-card mt-3 text-center text-white"></i>
+               <h5 class="text-center text-white mt-2 mb-3">Quitação de dívidas</h5>
                <div class="row">
-                    <div class="center col-sm-11">
-                         <h4 class="text-center text-dark"><b>Despesas pessoais</b></h4>
+                    <div class="col-md-3">
+                         <label class="form-label mb-2 text-white" for="creditor">Credor</label>
+                         <input class="form-control mb-2" type="text" id="creditor">
                     </div>
-                    <div class="center col-sm-1">
-                         <i class="fa-solid fa-xmark mr-2 text-dark" id="btnClosePersonalExpenses"></i>
+                    <div class="col-md-5">
+                         <label class="form-label mb-2 text-white" for="valueCredited">Valor contratado</label>
+                         <input class="form-control mb-2 text-center text-white" type="number" id="valueCredited">
+                    </div>
+                    <div class="col-md-4">
+                         <label class="form-label mb-2 text-white" for="dateDebt">Data do empréstimo</label>
+                         <input class="form-control mb-2 text-center text-white" type="date" id="dateDebt">
                     </div>
                </div>
                <div class="row">
-                    <div class="col-sm-4">
-                         <label class="form-label mt-2 text-dark" for="dateExpense">Data</label>
-                         <input class="form-control" type="datetime-local" id="dateExpense">
+                    <div class="col-md-6">
+                         <button class="btn btn-block btn-primary mb-3">Calcular</button>
                     </div>
-                    <div class="col-sm-5">
-                         <label class="form-label mt-2 text-dark" for="typeExpense">Tipo</label>
-                         <select class="form-control" name="" id="">
-                              <option value="" selected disabled></option>
-                              <option value="food" id="food">Alimentação</option>
-                              <option value="fuel" id="fuel">Combustível</option>
-                              <option value="education" id="education">Educação</option>
-                              <option value="finance" id="finance">Financeiro</option>
-                              <option value="fun" id="fun">Lazer</option>
-                              <option value="health" id="health">Saúde</option>
-                              <option value="phoneBill" id="phoneBill">Telefone</option>
-                              <option value="transportation" id="transportation">Transporte</option>
-                         </select>
-                    </div>
-                    <div class="col-sm-3">
-                         <label class="form-label mt-2 text-dark" for="personalValue">Valor</label>
-                         <input class="form-control" type="number" placeholder="R$ 0,00" id="personalValue">
-                    </div>
-               </div>
-               <label class="form-label my-2 text-center text-dark" for="expenseDetails">Informações adicionais</label>
-               <textarea class="form-control mb-2 mx-auto" name="" id="" cols="30" rows="3" id="expenseDetails"></textarea>
-               <div class="row">
-                    <div class="buttonsExpenses col-sm-6">
-                         <button class="btn btn-block btn-primary my-2" id="btnSavePersonalExpenses"><i class="fa-regular fa-floppy-disk"></i> Salvar despesa</button>
-                    </div>
-                    <div class="buttonsExpenses col-sm-6">
-                         <button class="btn btn-block btn-danger my-2"><i class="fa-solid fa-ban" id="btnCloseExpense"></i> Cancelar</button>
+                    <div class="col-md-6">
+                         <button class="btn btn-block btn-danger mb-3">Cancelar</button>
                     </div>
                </div>
           </div>
-
-          <!--Dashboard despesas pessoais-->
-          <div class="bg-secondary col-sm-12 col-lg-6 d-none mt-3 mx-auto personalScreen p-3" id="personalScreen">
-               <h4 class="text-center text-white">Relatório de despesas pessoais</h4>
-               <div class="centerColumn row">
-                    <div class="bg-success centerColumn col-sm-5 m-3 profits rounded shadow">
-                         <i class="fa-solid fa-coins p-2 text-white"></i>
-                         <h4 class="text-center text-white">Receitas</h4>
-                         <span class="mb-3 text-center text-white">R$ 1200,00</span>
-                    </div>
-                    <div class="bg-danger centerColumn col-sm-5 m-3 expenses rounded shadow">
-                         <i class="fa-solid fa-coins p-2 text-white"></i>
-                         <h4 class="text-center text-white">Despesas</h4>
-                         <span class="mb-3 text-center text-white">R$ 200,00</span>
-                    </div>
-               </div>
-               <div class="centerColumn col gain">
-                    <h3 class="text-center text-white">Ganho líquido estimado:</h3>
-                    <span class="text-center text-white">R$ 1.000,00</span>
-               </div>
-          </div>
+          
 
           <!--Formulário de despesas veiculares-->
           <div class="border col-sm-12 col-xl-6 d-none mt-3 mx-auto p-3 vehicular" id="vehicular">
