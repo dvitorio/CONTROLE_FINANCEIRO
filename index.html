@@ -11,15 +11,28 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <!--CSS-->
      <link rel="stylesheet" href="css/styles.css">
+     <script src="js/vehicular.js" defer></script>
+     <script src="js/debts.js" defer></script>
 </head>
-<body>
+<body class="bg-white">
      
-          <!--Menu inicial-->
-          <h1 class="mb-4 text-center text-secondary" id="title">Controle de movimentação financeira</h1>
-          <div class="buttons col-sm-12 col-md-4 mx-auto" id="buttons">
-               <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnDebt"><i class="fa-solid fa-id-card mb-2"></i>  Quitação de dívidas</button>
-               <button class="bg-primary border-0 btn btn-dark centerColumn mb-2 ml-2 mx-auto" id="btnVehicular"><i class="fa-solid fa-car mb-2"></i>  Despesas veiculares</button>
+
+     <!--Container geral-->
+     <div class="col-sm-12 newGeneral mx-auto" id="newGeneral">
+          <div class="row">
+               <div class="backGroundImage col-md-6" id="backGroundImage">
+                    <img src="/img/finance.jpg" alt="">
+               </div>
+               <div class="backGroundTitle centerColumn col-md-6" id="backGroundTitle">
+                    <h1 class="center font-weight-bold mb-5 text-center" id="title">Controle de movimentação financeira</h1>
+                    <div class="buttons col-sm-12 col-md-6 container mx-auto" id="buttons">
+                         <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnDebt">Quitação de dívidas</button>
+                         <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnVehicular">Despesas veiculares</button>
+                    </div>
+               </div>
           </div>
+
+          
 
           <!--Formulário de busca de credores-->
           <div class="col-xs-6 col-xl-6 debtSearch container d-none mt-3" id="debtSearch">
@@ -40,7 +53,7 @@
 
 
           <!--Formulário de quitação de dívidas -->
-          <div class="col-xs-6 col-xl-6 container debtForm d-none mt-3" id="debtForm">
+          <div class="col-sm-12 col-xl-6 container debtQuit d-none mt-3" id="debtQuit">
                <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Quitação de dívidas</h6>
                <label class="text-secondary" for="">Consulta credor</label>
                <div class="row">
@@ -88,37 +101,37 @@
                <div class="row">
                     <div class="col-sm-2">
                          <label class="form-label mt-2 text-dark" for="kmBegin">Km inicial</label>
-                         <input class="error form-control" type="number" id="kmBegin">
+                         <input class="form-control" type="number" id="kmBegin">
                     </div>
                     <div class="col-sm-4">
                          <label class="form-label mt-2 text-dark" for="journeyBegin">Início jornada</label>
-                         <input class="error form-control" type="datetime-local" id="journeyBegin">
+                         <input class="form-control" type="datetime-local" id="journeyBegin">
                     </div>
                     <div class="col-sm-2">
                          <label class="form-label mt-2 text-dark" for="kmEnd">Km final</label>
-                         <input class="error form-control" type="number" id="kmEnd">
+                         <input class="form-control" type="number" id="kmEnd">
                     </div>
                     <div class="col-sm-4">
                          <label class="form-label mt-2 text-dark" for="journeyEnd">Fim jornada</label>
-                         <input class="error form-control" type="datetime-local" id="journeyEnd">
+                         <input class="form-control" type="datetime-local" id="journeyEnd">
                     </div>
                </div>
                <div class="row">
                     <div class="col-sm-3">
                          <label class="form-label mt-2 text-dark" for="pauseBegin">Início pausa</label>
-                         <input class="error form-control" type="datetime-local" id="pauseBegin">
+                         <input class="form-control" type="datetime-local" id="pauseBegin">
                     </div>
                     <div class="col-sm-3">
                          <label class="form-label mt-2 text-dark" for="kmBeginPausa">Km início pausa</label>
-                         <input class="error form-control" type="number" id="kmBeginPausa">
+                         <input class="form-control" type="number" id="kmBeginPausa">
                     </div>
                     <div class="col-sm-3">
                          <label class="form-label mt-2 text-dark" for="pauseEnd">Final pausa</label>
-                         <input class="error form-control" type="datetime-local" id="pauseEnd">
+                         <input class="form-control" type="datetime-local" id="pauseEnd">
                     </div>
                     <div class="col-sm-3">
                          <label class="form-label mt-2 text-dark" for="kmEndPausa">Km final pausa</label>
-                         <input class="error form-control" type="number" id="kmEndPausa">
+                         <input class="form-control" type="number" id="kmEndPausa">
                     </div>
                </div>
                <label class="form-label mt-2 my-2 text-dark" for="">Detalhes da despesa</label>
@@ -166,6 +179,7 @@
                     </div>
                </div>
           </div>
+     </div>
 
 
 
@@ -173,7 +187,5 @@
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-     <script src="js/vehicular.js" defer></script>
-     <script src="js/debts.js" defer></script>
 </body>
 </html>

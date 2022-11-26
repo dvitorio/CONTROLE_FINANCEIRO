@@ -1,3 +1,4 @@
+//INICIALIZAÇÃO DE VARIÁVEIS
 const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
 const btnConfirmExpense = document.getElementById('btnConfirmExpense');
 const btnPrintVehicularExpenses = document.getElementById('btnPrintVehicularExpenses');
@@ -5,21 +6,25 @@ const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpens
 const btnVehicular = document.getElementById('btnVehicular');
 const buttons = document.getElementById('buttons');
 const selectOptions = document.getElementById('selectOptions');
-const title = document.getElementById('title');
 const vehicularScreen = document.getElementById('vehicular');
 const btnCancel = document.getElementById('btnCancel');
+const confirmExpense = document.getElementById('confirmExpense');
+const backGroundTitle = document.getElementById('backGroundTitle');
+const backGroundImage = document.getElementById('backGroundImage');
 
 
 //OPEN MODAL VEHICULAR AND CLOSE MENU
 btnVehicular.onclick = ()=>{
-     title.classList.add('d-none');
+     backGroundTitle.classList.add('d-none');
+     backGroundImage.classList.add('d-none');
      vehicularScreen.classList.remove('d-none');
      buttons.classList.add('d-none');
 }
 
 //CLOSE MODAL VEHICULAR AND OPEN MENU
 btnCancel.onclick = ()=>{
-     title.classList.remove('d-none');
+     backGroundTitle.classList.remove('d-none');
+     backGroundImage.classList.remove('d-none');
      vehicularScreen.classList.add('d-none');
      buttons.classList.remove('d-none');
 }
@@ -32,17 +37,17 @@ btnSaveVehicularExpenses.onclick = ()=>{
 
 //SAVE DATA OND VEHICULAR MODAL, REQUIRE CONFIRMATION AND REOPEN MENU AND PAGE TITLE
 btnSaveVehicularExpenses.onclick = ()=>{
-     let valueVehicular = document.getElementById('valueVehicular');
      confirmExpense.classList.remove('d-none');
      vehicularScreen.classList.add('d-none');
-     title.classList.add('d-none');
+     backGroundTitle.classList.add('d-none');
      buttons.classList.add('d-none');
 }
 
 //CLOSE MODAL CONFIRM EXPENSE VEHICULAR
 btnConfirmExpense.onclick = ()=>{
      confirmExpense.classList.add('d-none');
-     title.classList.remove('d-none');
+     backGroundTitle.classList.remove('d-none');
+     backGroundImage.classList.remove('d-none');
      buttons.classList.remove('d-none');
 }
 

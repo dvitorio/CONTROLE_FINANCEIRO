@@ -34,15 +34,27 @@ body{
      justify-content: center;
 }
 
-.buttons button{
-     border-radius: 10px !important;
-     min-height: 100px !important;
-     min-width: 250px !important;
+.newGeneral{
+     width: 100vw;
+     height: 100vh;
 }
 
-i{
+.backGroundImage img{
+     min-width: 20%;
+     max-width: 100%;
+}
+
+.backGroundTitle h1{
+     color: #57aa86;
+}
+
+.buttons button{
+     background-color: #57aa86;
+     border-radius: 10px !important;
      cursor: pointer;
-     font-size: 1rem;
+     font-size: 1.25rem !important;
+     min-height: 80px !important;
+     min-width: 250px !important;
 }
 
 #btnClose i{
@@ -78,11 +90,23 @@ i{
      min-width: 150px;
 }
 
-/*.error{
-     border: 1px solid #ff0000 !important;
-     color: #ff0000 !important;
-}*/
 
+
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 16rem) and (max-width: 45rem) {
+
+.newGeneral{
+     display: flex;
+     align-items: center;
+     justify-items: center;
+}
+
+.backGroundTitle h1{
+     font-size: 1.25rem;
+}
+
+}
 
 
 
