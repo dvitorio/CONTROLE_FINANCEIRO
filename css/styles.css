@@ -78,6 +78,11 @@ i{
      min-width: 150px;
 }
 
+/*.error{
+     border: 1px solid #ff0000 !important;
+     color: #ff0000 !important;
+}*/
+
 
 
 
