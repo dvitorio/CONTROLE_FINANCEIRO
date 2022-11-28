@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <!--CSS-->
      <link rel="stylesheet" href="css/styles.css">
+     <!--JAVASCRIPT-->
      <script src="js/vehicular.js" defer></script>
      <script src="js/debts.js" defer></script>
 </head>
@@ -26,13 +27,11 @@
                <div class="backGroundTitle centerColumn col-md-6" id="backGroundTitle">
                     <h1 class="center font-weight-bold mb-5 text-center" id="title">Controle de movimentação financeira</h1>
                     <div class="buttons col-sm-12 col-md-6 container mx-auto" id="buttons">
-                         <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnDebt">Quitação de dívidas</button>
+                         <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnQuit">Quitação de dívidas</button>
                          <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnVehicular">Despesas veiculares</button>
                     </div>
                </div>
           </div>
-
-          
 
           <!--Formulário de busca de credores-->
           <div class="col-xs-6 col-xl-6 debtSearch container d-none mt-3" id="debtSearch">
@@ -50,7 +49,6 @@
                     </div>
                </div>
           </div>
-
 
           <!--Formulário de quitação de dívidas -->
           <div class="col-sm-12 col-xl-6 container debtQuit d-none mt-3" id="debtQuit">
@@ -72,7 +70,6 @@
                
           </div>
           
-
           <!--Formulário de despesas veiculares-->
           <div class="border col-sm-12 col-xl-6 d-none mt-3 mx-auto p-3 vehicular" id="vehicular">
                <h4 class="text-center text-dark mb-5">Despesas veiculares</h4>
@@ -148,8 +145,6 @@
                     </div>
                </div>
           </div>
-          <h6 class="fixed-bottom text-center text-secondary">Desenvolvido por Daniel Vitorio</h6>
-
 
           <!--alert confirm expense-->
           <div class="border centerColumn col-xl-4 confirmExpense d-none my-3 mx-auto p-2" id="confirmExpense">
@@ -179,7 +174,50 @@
                     </div>
                </div>
           </div>
+
+
+          <!--Status da dívida-->
+          <div class="border col-lg-4 container d-none mb-3 mx-auto rounded status">
+               <h4 class="pt-3 text-center text-secondary">Amortização de dívidas</h4>
+               <div class="row">
+                    <div class="col-sm-6">
+                         <label class="form-label text-secondary" for="creditor">Credor</label>
+                         <input class="form-control mb-3" type="text" id="creditor">
+                    </div>
+                    <div class="col-sm-6">
+                         <label class="form-label text-secondary" for="date">Data do pagamento</label>
+                         <input class="form-control mb-3" type="date" id="date">
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-sm-4">
+                         <input class="form-control my-3" type="number" placeholder="Nº parcelas" id="numParc">
+                    </div>
+                    <div class="col-sm-8">
+                         <input class="form-control my-3" type="number" placeholder="Valor da dívida (R$)" id="debtValue">
+                    </div>
+               </div>
+                    <button class="btn btn-primary mr-2 mb-2 my-2 w-25" id="btnCalcular">Calcular</button>
+                    <button class="btn btn-secondary mb-2 my-2 text-white w-25">Limpar</button>
+                    <button class="btn btn-danger mb-2 my-2 text-white w-25">Cancelar</button>
+               <div class="row">
+                    <div class="col-sm-4">
+                         <label class="parValue" for="parcValue">Valor da parcela</label>
+                         <input class="form-control mb-3" type="number" id="parcValue" placeholder="Valor da parcela">
+                    </div>
+                    <div class="col-sm-8">
+                         <label class="form-label" for="balance">Saldo devedor</label>
+                         <input class="form-control mb-3" type="number" id="balance" placeholder="Saldo devedor">
+                    </div>
+               </div>
+          </div>
+
      </div>
+
+
+    
+
+
 
 
 

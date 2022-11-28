@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap');
 
 *{
      box-sizing: border-box;
-     font-family: 'Raleway', sans-serif;
+     font-family: 'Montserrat', sans-serif;     
      margin: 0;
      padding: 0;
+}
+
+label{
+     font-size: .9rem;
 }
 
 body{
@@ -35,8 +39,9 @@ body{
 }
 
 .newGeneral{
-     width: 100vw;
-     height: 100vh;
+     min-width: 100vw;
+     min-height: 100vh;
+     z-index: 10;
 }
 
 .backGroundImage img{
@@ -80,6 +85,11 @@ body{
      margin: auto;
 }
 
+.debtStatus span{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 3rem;
+}
+
 .confirmExpense, .confirmSearch{
      background-color: #e2d5d5;
      border-radius: 10px !important;
@@ -89,6 +99,15 @@ body{
 .confirmExpense button, .confirmSearch button{
      min-width: 150px;
 }
+
+.status{
+     background-color: #dae6e0;
+     border-radius: 10px;
+     min-width: 40vw;
+     min-height: 40vh;
+}
+
+
 
 
 

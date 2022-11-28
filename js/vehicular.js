@@ -1,16 +1,16 @@
 //INICIALIZAÇÃO DE VARIÁVEIS
+const backGroundImage = document.getElementById('backGroundImage');
+const backGroundTitle = document.getElementById('backGroundTitle');
+const btnCancel = document.getElementById('btnCancel');
 const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
 const btnConfirmExpense = document.getElementById('btnConfirmExpense');
 const btnPrintVehicularExpenses = document.getElementById('btnPrintVehicularExpenses');
 const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
 const btnVehicular = document.getElementById('btnVehicular');
 const buttons = document.getElementById('buttons');
+const confirmExpense = document.getElementById('confirmExpense');
 const selectOptions = document.getElementById('selectOptions');
 const vehicularScreen = document.getElementById('vehicular');
-const btnCancel = document.getElementById('btnCancel');
-const confirmExpense = document.getElementById('confirmExpense');
-const backGroundTitle = document.getElementById('backGroundTitle');
-const backGroundImage = document.getElementById('backGroundImage');
 
 
 //OPEN MODAL VEHICULAR AND CLOSE MENU
@@ -55,4 +55,23 @@ btnConfirmExpense.onclick = ()=>{
 btnPrintVehicularExpenses.onclick = ()=>{
      vehicularScreen.print();
 }
+
+
+const btnCalcular = document.getElementById('btnCalcular');
+
+btnCalcular.onclick = ()=>{
+     let debtValue = parseFloat(document.getElementById('debtValue').value);
+     let numParc = parseFloat(document.getElementById('numParc').value);
+     let parcValue = document.getElementById('parcValue').value;
+     let balance = document.getElementById('balance').value;
+     parcValue = (debtValue/numParc);
+     balance = debtValue - parcValue;
+     document.getElementById('balance').value = balance.toFixed(2);
+     document.getElementById('parcValue').value = parcValue.toFixed(2);
+}
+ 
+
+
+
+
 

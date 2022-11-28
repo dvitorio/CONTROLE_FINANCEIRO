@@ -14,12 +14,12 @@ const debtQuit = document.getElementById('debtQuit');
 const debtSearch = document.getElementById('debtSearch');
 
 
-//OPEN FORM DEBT 
+//OPEN FORM DEBT
 btnDebt.onclick = ()=>{
-     backGroundTitle.classList.add('d-none');
      debtQuit.classList.remove('d-none');
+     backGroundTitle.classList.add('d-none');
+     backGroundImage.classList.add('d-none');
 }
-
 
 //CLOSE FORM DEBT
 btnCloseDebtForm.onclick = ()=>{
@@ -49,3 +49,5 @@ btnConfirmSearch.onclick = ()=>{
      backGroundTitle.classList.remove('d-none');
      buttons.classList.remove('d-none');
 }
+
+
