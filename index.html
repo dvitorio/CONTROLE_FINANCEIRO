@@ -12,8 +12,8 @@
      <!--CSS-->
      <link rel="stylesheet" href="css/styles.css">
      <!--JAVASCRIPT-->
-     <script src="js/vehicular.js" defer></script>
-     <script src="js/debts.js" defer></script>
+     <script src="js/expenses.js" defer></script>
+
 </head>
 <body class="bg-white">
      
@@ -50,19 +50,21 @@
                </div>
           </div>
 
-          <!--Formulário de quitação de dívidas -->
-          <div class="col-sm-12 col-xl-6 container debtQuit d-none mt-3" id="debtQuit">
-               <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Quitação de dívidas</h6>
-               <label class="text-secondary" for="">Consulta credor</label>
+          <!--Formulário de registro de dívidas (DEBT REGISTER)-->
+          <div class="col-sm-12 col-xl-6 container d-none debtQuit mt-3" id="debtQuit">
+               <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Registro de dívida</h6>
                <div class="row">
                     <div class="col-sm-6">
-                         <input class="form-control mb-3" type="text" id="creditor" placeholder="Nome do credor">
+                         <label class="form-label mb-2" for="creditorName">Nome do credor</label>
+                         <input class="form-control mb-3" type="text" id="creditorName">
                     </div>
                     <div class="col-sm-3">
-                         <input class="form-control mb-3" type="number" id="valueDebt" placeholder="R$ 0,00">
+                         <label class="form-label mb-2" for="valueDebt">Valor da dívida</label>
+                         <input class="form-control mb-3" type="number" id="valueDebt" placeholder="R$">
                     </div>
                     <div class="col-sm-3">
-                         <input class="form-control mb-3" type="date" id="creditorName" placeholder="Nome do credor">
+                         <label class="form-label mb-2" for="dataDebt">Data</label>
+                         <input class="form-control mb-3" type="date" id="dataDebt">
                     </div>
                </div>
                <button class="btn btn-primary mb-3" id="btnSaveDebtForm"><i class="fa-regular fa-floppy-disk"></i> Cadastrar</button>
@@ -148,7 +150,7 @@
 
           <!--alert confirm expense-->
           <div class="border centerColumn col-xl-4 confirmExpense d-none my-3 mx-auto p-2" id="confirmExpense">
-               <h5 class="text-center text-dark"><i class="fa-solid fa-money-bill-transfer my-2 text-dark"></i><b> Controle de Movimentação Financeira</b></h5>
+               <h5 class="text-center text-dark"><i class="fa-solid fa-money-bill-transfer my-2 text-dark"></i><b> Quitação de dívidas</b></h5>
                <h6 class="my-3 text-center text-dark">Tem certeza de que deseja registrar essa despesa?</h6>
                <div class=" mb-3 row">
                     <div class="col-md-6">
@@ -158,7 +160,13 @@
                          <button class="btn btn-block btn-outline-danger mb-2 shadow-md text-dark" id="btnCancelExpense">Cancelar</button>
                     </div>
                </div>
-               
+          </div>
+
+          <!--Confirm expense message success-->
+          <div class="border col-xl-4 confirmExpenseSuccess centerColumn d-none my-3 mx-auto p-2">
+               <h5 class="text-center text-dark">Quitação de dívida</h5>
+               <h6 class="my-2 text-center text-dark"><i class="fa-solid fa-check text-success"></i> Dívida registrada com sucesso!</h6>
+               <button class="btn btn-danger mb-2 mx-auto">Fechar</button>
           </div>
 
           <!--alert confirm search-->
@@ -175,9 +183,8 @@
                </div>
           </div>
 
-
           <!--Status da dívida-->
-          <div class="border col-lg-4 container d-none mb-3 mx-auto rounded status">
+          <div class="border col-lg-4 container d-none mb-3 mx-auto rounded statusDebt" id="statusDebt">
                <h4 class="pt-3 text-center text-secondary">Amortização de dívidas</h4>
                <div class="row">
                     <div class="col-sm-6">
@@ -216,10 +223,6 @@
 
 
     
-
-
-
-
 
      <!--JAVASCRIPT-->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

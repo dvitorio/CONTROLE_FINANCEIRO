@@ -74,7 +74,7 @@ body{
      display: block;
 }
 
-.debtSearch, .debtForm{
+.debtSearch, .debtQuit{
      background-color: rgb(218, 205, 205) !important;
      border-radius: 8px !important;
 }
@@ -90,7 +90,7 @@ body{
      font-size: 3rem;
 }
 
-.confirmExpense, .confirmSearch{
+.confirmExpense, .confirmSearch, .confirmExpenseSuccess{
      background-color: #e2d5d5;
      border-radius: 10px !important;
      box-shadow: 3px 6px 9px rgb(167, 163, 163);
