@@ -69,13 +69,13 @@ body{
 }
 
 .vehicular{
-     background-color: #e2d5d5;
+     background-color: #7ac7ac;
      border-radius: 10px !important;
      display: block;
 }
 
 .debtSearch, .debtQuit{
-     background-color: rgb(218, 205, 205) !important;
+     background-color: #7ac7ac !important;
      border-radius: 8px !important;
 }
 
@@ -90,10 +90,15 @@ body{
      font-size: 3rem;
 }
 
-.confirmExpense, .confirmSearch, .confirmExpenseSuccess{
-     background-color: #e2d5d5;
+.confirmExpense, .confirmSearch{
+     background-color: #7ac7ac;
      border-radius: 10px !important;
      box-shadow: 3px 6px 9px rgb(167, 163, 163);
+}
+
+.confirmExpenseSuccess{
+     background-color: whitesmoke !important;
+     border-radius: 10px !important;
 }
 
 .confirmExpense button, .confirmSearch button{
@@ -101,7 +106,7 @@ body{
 }
 
 .status{
-     background-color: #dae6e0;
+     background-color: #7ac7ac;
      border-radius: 10px;
      min-width: 40vw;
      min-height: 40vh;

@@ -15,8 +15,7 @@
      <script src="js/expenses.js" defer></script>
 
 </head>
-<body class="bg-white">
-     
+<body class="bg-white">     
 
      <!--Container geral-->
      <div class="col-sm-12 newGeneral mx-auto" id="newGeneral">
@@ -34,7 +33,7 @@
           </div>
 
           <!--Formulário de busca de credores-->
-          <div class="col-xs-6 col-xl-6 debtSearch container d-none mt-3" id="debtSearch">
+          <div class="col-xs-6 col-xl-6 debtSearch container d-none mt-3 mx-auto" id="debtSearch">
                <img src="/img/holdhand.png" alt="" width="45">
                <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Planejamento e quitação de empréstimos pessoais</h6>
                <div class="row">
@@ -51,10 +50,10 @@
           </div>
 
           <!--Formulário de registro de dívidas (DEBT REGISTER)-->
-          <div class="col-sm-12 col-xl-6 container d-none debtQuit mt-3" id="debtQuit">
+          <div class="col-sm-12 col-xl-6 container d-none debtQuit mt-3 mx-auto" id="debtQuit">
                <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Registro de dívida</h6>
                <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                          <label class="form-label mb-2" for="creditorName">Nome do credor</label>
                          <input class="form-control mb-3" type="text" id="creditorName">
                     </div>
@@ -65,6 +64,10 @@
                     <div class="col-sm-3">
                          <label class="form-label mb-2" for="dataDebt">Data</label>
                          <input class="form-control mb-3" type="date" id="dataDebt">
+                    </div>
+                    <div class="col-sm-2">
+                         <label class="form-label mb-2" for="numeroParcelas">Nº parcelas</label>
+                         <input class="form-control mb-3" type="number" id="numeroParcelas">
                     </div>
                </div>
                <button class="btn btn-primary mb-3" id="btnSaveDebtForm"><i class="fa-regular fa-floppy-disk"></i> Cadastrar</button>
@@ -163,10 +166,10 @@
           </div>
 
           <!--Confirm expense message success-->
-          <div class="border col-xl-4 confirmExpenseSuccess centerColumn d-none my-3 mx-auto p-2">
-               <h5 class="text-center text-dark">Quitação de dívida</h5>
-               <h6 class="my-2 text-center text-dark"><i class="fa-solid fa-check text-success"></i> Dívida registrada com sucesso!</h6>
-               <button class="btn btn-danger mb-2 mx-auto">Fechar</button>
+          <div class="border col-xl-4 confirmExpenseSuccess centerColumn d-none my-3 mx-auto p-2 shadow" id="confirmExpenseSuccess">
+               <h5 class="text-center text-success">Quitação de dívida</h5>
+               <h6 class="my-2 text-center text-success"><i class="fa-solid fa-check text-success"></i> Dívida registrada com sucesso!</h6>
+               <button class="btn btn-danger mb-2 mx-auto" id="btnCloseConfirmExpenseSuccess">Fechar</button>
           </div>
 
           <!--alert confirm search-->

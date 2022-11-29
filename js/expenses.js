@@ -3,6 +3,7 @@ const backGroundImage = document.getElementById('backGroundImage');
 const backGroundTitle = document.getElementById('backGroundTitle');
 const btnCancel = document.getElementById('btnCancel');
 const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
+const btnCloseConfirmExpenseSuccess = document.getElementById('btnCloseConfirmExpenseSuccess');
 const btnCloseDebtForm = document.getElementById('btnCloseDebtForm');
 const btnConfirmExpense = document.getElementById('btnConfirmExpense');
 const btnPrintVehicularExpenses = document.getElementById('btnPrintVehicularExpenses');
@@ -31,9 +32,17 @@ btnQuit.onclick = ()=>{
 btnSaveDebtForm.onclick = ()=>{
      debtQuit.classList.add('d-none');
      confirmExpense.classList.remove('d-none');
-     confirmExpenseSuccess.classList.remove('d-none');
-     backGroundImage.classList.remove('d-none');
-     backGroundTitle.classList.remove('d-none');
+     btnConfirmExpense.onclick = ()=>{
+          confirmExpenseSuccess.classList.remove('d-none');
+          confirmExpense.classList.add('d-none');
+          backGroundImage.classList.add('d-none');
+          backGroundTitle.classList.add('d-none');
+     }
+     btnCloseConfirmExpenseSuccess.onclick = ()=>{
+          backGroundImage.classList.remove('d-none');
+          backGroundTitle.classList.remove('d-none');
+          confirmExpenseSuccess.classList.add('d-none');
+     }
 }
 
 //CLOSE MODAL DEBT REGISTER
