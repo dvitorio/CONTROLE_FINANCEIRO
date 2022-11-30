@@ -31,7 +31,13 @@ const solveDebt = document.getElementById('solveDebt');
 const statusDebt = document.getElementById('statusDebt');
 const subMenu = document.getElementById('subMenu');
 const vehicularScreen = document.getElementById('vehicular');
+const btnCloseApp = document.getElementById('btnCloseApp');
 
+
+//CLOSE APP
+btnCloseApp.onclick = ()=>{
+     window.close();
+}
 
 //OPEN SUBMENU DEBT
 btnSubMenu.onclick = ()=>{

@@ -45,7 +45,7 @@ body{
 }
 
 .subMenu{
-     max-width: fit-content;
+     max-width: 60vw !important;
 }
 
 .subMenu button{
@@ -68,6 +68,11 @@ body{
 .backGroundImage img{
      min-width: 20%;
      max-width: 100%;
+}
+
+.subMenuImage img{
+     min-width: 25%;
+     max-width: 60%;
 }
 
 .backGroundTitle h1{
