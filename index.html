@@ -26,12 +26,30 @@
                <div class="backGroundTitle centerColumn col-md-6" id="backGroundTitle">
                     <h1 class="center font-weight-bold mb-5 text-center" id="title">Controle de movimentação financeira</h1>
                     <div class="buttons col-sm-12 col-md-6 container mx-auto" id="buttons">
-                         <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnQuit">Quitação de dívidas</button>
+                         <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnSubMenu">Despesas pessoais</button>
                          <button class="border-0 btn btn-block btn-dark centerColumn mb-2 mx-auto" id="btnVehicular">Despesas veiculares</button>
                     </div>
                </div>
           </div>
 
+          <!--Submenu de Despesas Pessoais-->
+          <div class="col-lg-6 container d-none mt-3 subMenu" id="subMenu">
+               <div class="row">
+                    <div class="col-sm-3">
+                         <button class="btn btn-success" id="btnSearchCreditor"><i class="fa-solid fa-magnifying-glass"></i> Consulta credor</button>
+                    </div>
+                    <div class="col-sm-3">
+                         <button class="btn btn-success" id="btnRegisterDebt"><i class="fa-solid fa-address-card"></i> Registrar dívida</button>
+                    </div>
+                    <div class="col-sm-3">
+                         <button class="btn btn-success" id="btnSolveDebt"><i class="fa-solid fa-coins"></i> Saldar dívida</button>
+                    </div>
+                    <div class="col-sm-3">
+                         <button class="btn btn-outline-danger text-white" id="btnCloseSubMenu"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+                    </div>
+               </div>
+          </div>
+          
           <!--Formulário de busca de credores-->
           <div class="col-xs-6 col-xl-6 debtSearch container d-none mt-3 mx-auto" id="debtSearch">
                <img src="/img/holdhand.png" alt="" width="45">
@@ -50,7 +68,7 @@
           </div>
 
           <!--Formulário de registro de dívidas (DEBT REGISTER)-->
-          <div class="col-sm-12 col-xl-6 container d-none debtQuit mt-3 mx-auto" id="debtQuit">
+          <div class="col-sm-12 col-xl-6 container d-none debtRegister mt-3 mx-auto" id="debtRegister">
                <h6 class="h6 my-2 p-2 font-weight-bold text-center text-secondary">Registro de dívida</h6>
                <div class="row">
                     <div class="col-sm-4">
@@ -73,6 +91,71 @@
                <button class="btn btn-primary mb-3" id="btnSaveDebtForm"><i class="fa-regular fa-floppy-disk"></i> Cadastrar</button>
                <button class="btn btn-outline-danger mb-3" id="btnCloseDebtForm"><i class="fa-solid fa-xmark"></i> Cancelar</button>
                
+          </div>
+
+          <!--Status da dívida-->
+          <div class="border col-lg-4 container d-none mb-3 mx-auto rounded statusDebt" id="statusDebt">
+               <h4 class="pt-3 text-center text-secondary">Amortização de dívidas</h4>
+               <div class="row">
+                    <div class="col-sm-6">
+                         <label class="form-label text-secondary" for="creditor">Credor</label>
+                         <input class="form-control mb-3" type="text" id="creditor">
+                    </div>
+                    <div class="col-sm-6">
+                         <label class="form-label text-secondary" for="date">Data do pagamento</label>
+                         <input class="form-control mb-3" type="date" id="date">
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-sm-4">
+                         <input class="form-control my-3" type="number" placeholder="Nº parcelas" id="numParc">
+                    </div>
+                    <div class="col-sm-8">
+                         <input class="form-control my-3" type="number" placeholder="Valor da dívida (R$)" id="debtValue">
+                    </div>
+               </div>
+                    <button class="btn btn-primary mr-2 mb-2 my-2 w-25" id="btnCalcular">Calcular</button>
+                    <button class="btn btn-secondary mb-2 my-2 text-white w-25">Limpar</button>
+                    <button class="btn btn-danger mb-2 my-2 text-white w-25">Cancelar</button>
+               <div class="row">
+                    <div class="col-sm-4">
+                         <label class="parValue" for="parcValue">Valor da parcela</label>
+                         <input class="form-control mb-3" type="number" id="parcValue" placeholder="Valor da parcela">
+                    </div>
+                    <div class="col-sm-8">
+                         <label class="form-label" for="balance">Saldo devedor</label>
+                         <input class="form-control mb-3" type="number" id="balance" placeholder="Saldo devedor">
+                    </div>
+               </div>
+          </div>
+
+
+          <!--Pagamento de dívida-->
+          <div class="col-xl-4 container d-none mb-3 mt-3 mx-auto rounded shadow solveDebt" id="solveDebt">
+               <h5 class="font-weight-bold mb-4 pt-3 text-center text-dark">Pagamento de dívida</h5>
+               <div class="row">
+                    <div class="col-sm-4">
+                         <label class="form-label my-2" for="dataPayment">Data</label>
+                         <input class="form-control mb-2" type="date" id="dataPayment" placeholder="R$">
+                    </div>
+                    <div class="col-sm-4">
+                         <label class="form-label my-2" for="balanceValue">Valor da divida</label>
+                         <input class="form-control mb-2" type="text" id="balanceValue" placeholder="R$">
+                    </div>
+                    <div class="col-sm-4">
+                         <label class="form-label my-2" for="parcValueBalance">Valor da parcela</label>
+                         <input class="form-control mb-2" type="text" id="parcValueBalance" placeholder="R$">
+                    </div>
+               </div>
+                    <button class="btn btn-primary my-3" id="btnAmort"><i class="fa-solid fa-file-invoice-dollar"></i> Amortizar dívida</button>
+                    <button class="btn btn-outline-danger my-3" id="btnEditDebt"><i class="fa-solid fa-pen"></i> Editar</button>
+               <div class="d-none resultDebt row" id="resultDebt">
+                    <div class="col-md-6">
+                         <label class="form-label my-2" for="resultAmort">Saldo devedor</label>
+                         <input class="form-control mb-2" type="text" id="resultAmort">
+                    </div>
+               </div>
+               <button class="btn btn-danger mb-3 my-2" id="btnCancelDebt"><i class="fa-solid fa-xmark"></i> Cancelar</button>
           </div>
           
           <!--Formulário de despesas veiculares-->
@@ -182,42 +265,6 @@
                     </div>
                     <div class="col-md-6">
                          <button class="btn btn-block btn-outline-danger mb-2 shadow-md text-dark" id="btnCancelSearch">Cancelar</button>
-                    </div>
-               </div>
-          </div>
-
-          <!--Status da dívida-->
-          <div class="border col-lg-4 container d-none mb-3 mx-auto rounded statusDebt" id="statusDebt">
-               <h4 class="pt-3 text-center text-secondary">Amortização de dívidas</h4>
-               <div class="row">
-                    <div class="col-sm-6">
-                         <label class="form-label text-secondary" for="creditor">Credor</label>
-                         <input class="form-control mb-3" type="text" id="creditor">
-                    </div>
-                    <div class="col-sm-6">
-                         <label class="form-label text-secondary" for="date">Data do pagamento</label>
-                         <input class="form-control mb-3" type="date" id="date">
-                    </div>
-               </div>
-               <div class="row">
-                    <div class="col-sm-4">
-                         <input class="form-control my-3" type="number" placeholder="Nº parcelas" id="numParc">
-                    </div>
-                    <div class="col-sm-8">
-                         <input class="form-control my-3" type="number" placeholder="Valor da dívida (R$)" id="debtValue">
-                    </div>
-               </div>
-                    <button class="btn btn-primary mr-2 mb-2 my-2 w-25" id="btnCalcular">Calcular</button>
-                    <button class="btn btn-secondary mb-2 my-2 text-white w-25">Limpar</button>
-                    <button class="btn btn-danger mb-2 my-2 text-white w-25">Cancelar</button>
-               <div class="row">
-                    <div class="col-sm-4">
-                         <label class="parValue" for="parcValue">Valor da parcela</label>
-                         <input class="form-control mb-3" type="number" id="parcValue" placeholder="Valor da parcela">
-                    </div>
-                    <div class="col-sm-8">
-                         <label class="form-label" for="balance">Saldo devedor</label>
-                         <input class="form-control mb-3" type="number" id="balance" placeholder="Saldo devedor">
                     </div>
                </div>
           </div>
