@@ -20,7 +20,7 @@
      <!--Container geral-->
      <div class="col-sm-12 newGeneral mx-auto" id="newGeneral">
           <div class="row">
-               <div class="backGroundImage col-md-6" id="backGroundImage">
+               <div class="backGroundImage col-sm-12 col-lg-6 container" id="backGroundImage">
                     <button class="btn btn-block btn-outline-success mt-2 mx-auto" id="btnCloseApp"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
                     <img src="/img/finance.jpg" alt="">
                </div>
@@ -40,16 +40,16 @@
                </div>
                <h5 class="font-weight-bold text-center" style="color:#57aa86;">Controle de movimentação financeira</h5>
                <div class="row">
-                    <div class="col-sm-3">
+                    <div class="center col-sm-12 col-lg-6 subMenuButtons">
                          <button class="btn btn-block btn-success mb-2" id="btnSearchCreditor"><i class="fa-solid fa-magnifying-glass"></i> Consulta credor</button>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="center col-sm-12 col-lg-6 subMenuButtons">
                          <button class="btn btn-block btn-success mb-2" id="btnRegisterDebt"><i class="fa-solid fa-address-card"></i> Registrar dívida</button>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="center col-sm-12 col-lg-6 subMenuButtons">
                          <button class="btn btn-block btn-success mb-2" id="btnSolveDebt"><i class="fa-solid fa-coins"></i> Saldar dívida</button>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="center col-sm-12 col-lg-6 subMenuButtons">
                          <button class="btn btn-block btn-outline-danger text-white" id="btnCloseSubMenu"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
                     </div>
                </div>
@@ -152,17 +152,17 @@
                          <input class="form-control mb-2" type="text" id="parcValueBalance" placeholder="R$">
                     </div>
                </div>
-                    <button class="btn btn-primary my-3" id="btnAmort"><i class="fa-solid fa-file-invoice-dollar"></i> Amortizar dívida</button>
-                    <button class="btn btn-outline-danger my-3" id="btnEditDebt"><i class="fa-solid fa-pen"></i> Editar</button>
+                    <button class="btn btn-primary mb-4 my-3" id="btnAmort"><i class="fa-solid fa-file-invoice-dollar"></i> Amortizar dívida</button>
+                    <button class="btn btn-danger mb-4 my-3" id="btnCancelDebt"><i class="fa-solid fa-xmark"></i> Cancelar</button>
                <div class="d-none resultDebt row" id="resultDebt">
                     <div class="col-md-6">
-                         <label class="form-label my-2" for="resultAmort">Saldo devedor</label>
-                         <input class="form-control mb-2" type="text" id="resultAmort">
+                         <label class="form-label my-3" for="resultAmort">Saldo devedor</label>
+                         <input class="form-control mb-4" type="text" id="resultAmort">
                     </div>
                </div>
-               <button class="btn btn-danger mb-3 my-2" id="btnCancelDebt"><i class="fa-solid fa-xmark"></i> Cancelar</button>
           </div>
           
+
           <!--Formulário de despesas veiculares-->
           <div class="border col-sm-12 col-xl-6 d-none mt-3 mx-auto p-3 vehicular" id="vehicular">
                <h4 class="text-center text-dark mb-5">Despesas veiculares</h4>

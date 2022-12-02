@@ -94,8 +94,7 @@ btnSaveDebtForm.onclick = ()=>{
 //CLOSE MODAL DEBT REGISTER
 btnCloseDebtForm.onclick = ()=>{
      debtRegister.classList.add('d-none');
-     backGroundImage.classList.remove('d-none');
-     backGroundTitle.classList.remove('d-none');
+     subMenu.classList.remove('d-none');
 }
 
 //CALCULATE AND SOLVE DEBT IN DEBT FORM
@@ -111,6 +110,13 @@ btnAmort.onclick = ()=>{
           else{
                alert('Valor da parcela não pode ser maior que o valor da dívida!');
           }
+}
+
+//OPEN SOLVE DEBT FORM
+btnSolveDebt.onclick = ()=>{
+     solveDebt.classList.remove('d-none');
+     subMenu.classList.add('d-none');
+
 }
 
 //CLOSE SOLVE DEBT FORM
