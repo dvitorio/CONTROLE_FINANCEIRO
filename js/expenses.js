@@ -46,6 +46,13 @@ btnSubMenu.onclick = ()=>{
      backGroundTitle.classList.add('d-none');
 }
 
+//CLOSE SUBMENU DEBT
+btnCloseSubMenu.onclick = ()=>{
+     subMenu.classList.add('d-none');
+     backGroundImage.classList.remove('d-none');
+     backGroundTitle.classList.remove('d-none');
+}
+
 //OPEN MODAL SEARCH CREDITOR
 btnSearchCreditor.onclick = ()=>{
      subMenu.classList.add('d-none');
@@ -58,13 +65,6 @@ btnCloseSearchDebt.onclick = ()=>{
      debtSearch.classList.add('d-none');
 }
 
-//CLOSE SUBMENU DEBT
-btnCloseSubMenu.onclick = ()=>{
-     subMenu.classList.add('d-none');
-     backGroundImage.classList.remove('d-none');
-     backGroundTitle.classList.remove('d-none');
-}
-
 //OPEN MODAL DEBT REGISTER
 btnRegisterDebt.onclick = ()=>{
      subMenu.classList.add('d-none');
@@ -73,8 +73,7 @@ btnRegisterDebt.onclick = ()=>{
      backGroundTitle.classList.add('d-none');
 }
 
-
-//SAVE DEBT REGISTER AND CLOSE MODAL
+//SAVE DATAS AND CLOSE MODAL
 btnSaveDebtForm.onclick = ()=>{
      debtRegister.classList.add('d-none');
      confirmExpense.classList.remove('d-none');
@@ -116,7 +115,6 @@ btnAmort.onclick = ()=>{
 btnSolveDebt.onclick = ()=>{
      solveDebt.classList.remove('d-none');
      subMenu.classList.add('d-none');
-
 }
 
 //CLOSE SOLVE DEBT FORM
