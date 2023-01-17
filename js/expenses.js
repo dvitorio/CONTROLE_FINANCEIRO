@@ -1,186 +1,76 @@
-//INICIALIZAÇÃO DE VARIÁVEIS
-const backGroundImage = document.getElementById('backGroundImage');
-const backGroundTitle = document.getElementById('backGroundTitle');
-const btnAmort = document.getElementById('btnAmort');
-const btnCancel = document.getElementById('btnCancel');
-const btnCancelDebt = document.getElementById('btnCancelDebt');
-const btnCancelExpenseVehicular = document.getElementById('btnCancelExpenseVehicular');
-const btnCloseConfirmExpenseSuccess = document.getElementById('btnCloseConfirmExpenseSuccess');
-const btnCloseDebtForm = document.getElementById('btnCloseDebtForm');
-const btnCloseSearchDebt = document.getElementById('btnCloseSearchDebt');
-const btnCloseSubMenu = document.getElementById('btnCloseSubMenu');
-const btnConfirmExpense = document.getElementById('btnConfirmExpense');
-const btnPrintVehicularExpenses = document.getElementById('btnPrintVehicularExpenses');
-const btnQuit = document.getElementById('btnQuit');
-const btnRegisterDebt = document.getElementById('btnRegisterDebt');
-const btnSaveDebtForm = document.getElementById('btnSaveDebtForm');
-const btnSaveVehicularExpenses = document.getElementById('btnSaveVehicularExpenses');
-const btnSearchCreditor = document.getElementById('btnSearchCreditor');
-const btnSolveDebt = document.getElementById('btnSolveDebt');
-const btnSubMenu = document.getElementById('btnSubMenu');
-const btnVehicular = document.getElementById('btnVehicular');
-const buttons = document.getElementById('buttons');
-const confirmExpense = document.getElementById('confirmExpense');
-const confirmExpenseSuccess = document.getElementById('confirmExpenseSuccess');
-const creditorName = document.getElementById('creditorName');
-const debtRegister = document.getElementById('debtRegister');
-const debtSearch = document.getElementById('debtSearch');
-const resultDebt = document.getElementById('resultDebt');
-const selectOptions = document.getElementById('selectOptions');
-const solveDebt = document.getElementById('solveDebt');
-const statusDebt = document.getElementById('statusDebt');
-const subMenu = document.getElementById('subMenu');
-const vehicularScreen = document.getElementById('vehicular');
+//INICIALIZAÇÃO DAS VARIÁVEIS GLOBAIS
 const btnCloseApp = document.getElementById('btnCloseApp');
+const btnCloseDebtForm = document.querySelector('#btnCloseDebtForm');
+const btnCloseSearchDebt = document.querySelector('#btnCloseSearchDebt');
+const btnPayDebt = document.querySelector('#btnPayDebt');
+const btnPersonalExpenses = document.querySelector('#btnPersonalExpenses');
+const btnRegisterDebt = document.querySelector('#btnRegisterDebt');
+const btnSaveDebtForm = document.getElementById('btnSaveDebtForm');
+const btnSearchDebt = document.querySelector('#btnSearchDebt');
+const buttons = document.querySelector('#buttons'); 
+const debtRegister = document.getElementById('debtRegister');
+const debtSearch = document.querySelector('#debtSearch');
+const title = document.querySelector('.title'); 
 
 
-//CLOSE APP
-btnCloseApp.onclick = ()=>{
-     window.close();
-}
+//Inicializa o array de objetos de dívidas
+var db_register_debt = [];
 
-//OPEN SUBMENU DEBT
-btnSubMenu.onclick = ()=>{
-     subMenu.classList.remove('d-none');
-     backGroundImage.classList.add('d-none');
-     backGroundTitle.classList.add('d-none');
-}
 
-//CLOSE SUBMENU DEBT
-btnCloseSubMenu.onclick = ()=>{
-     subMenu.classList.add('d-none');
-     backGroundImage.classList.remove('d-none');
-     backGroundTitle.classList.remove('d-none');
-}
 
-//OPEN MODAL SEARCH CREDITOR
-btnSearchCreditor.onclick = ()=>{
-     subMenu.classList.add('d-none');
-     debtSearch.classList.remove('d-none');
-}
+//Fecha aplicativo
+btnCloseApp.onclick = ()=> window.close();
 
-//CLOSE MODAL SEARCH CREDITOR
-btnCloseSearchDebt.onclick = ()=>{
-     subMenu.classList.remove('d-none');
-     debtSearch.classList.add('d-none');
-}
+//Mostra botões do submenu de despesas pessoais
+btnPersonalExpenses.addEventListener('click', ()=>{
+     btnRegisterDebt.classList.toggle('d-none');
+     btnPayDebt.classList.toggle('d-none');
+     btnSearchDebt.classList.toggle('d-none');
+});
 
-//OPEN MODAL DEBT REGISTER
-btnRegisterDebt.onclick = ()=>{
-     subMenu.classList.add('d-none');
+//Abre modal de registro de dívida
+btnRegisterDebt.addEventListener('click', ()=>{
      debtRegister.classList.remove('d-none');
-     backGroundImage.classList.add('d-none');
-     backGroundTitle.classList.add('d-none');
-}
-
-//SAVE DATAS AND CLOSE MODAL
-btnSaveDebtForm.onclick = ()=>{
-     debtRegister.classList.add('d-none');
-     confirmExpense.classList.remove('d-none');
-     btnConfirmExpense.onclick = ()=>{
-          confirmExpenseSuccess.classList.remove('d-none');
-          confirmExpense.classList.add('d-none');
-          backGroundImage.classList.add('d-none');
-          backGroundTitle.classList.add('d-none');
-     }
-     btnCloseConfirmExpenseSuccess.onclick = ()=>{
-          backGroundImage.classList.remove('d-none');
-          backGroundTitle.classList.remove('d-none');
-          confirmExpenseSuccess.classList.add('d-none');
-     }
-}
-
-//CLOSE MODAL DEBT REGISTER
-btnCloseDebtForm.onclick = ()=>{
-     debtRegister.classList.add('d-none');
-     subMenu.classList.remove('d-none');
-}
-
-//CALCULATE AND SOLVE DEBT IN DEBT FORM
-btnAmort.onclick = ()=>{
-     let balanceValue = parseFloat(document.getElementById('balanceValue').value.replace(',','.'));
-     let parcValueBalance = parseFloat(document.getElementById('parcValueBalance').value.replace(',','.'));
-     let resultAmort = parseFloat(document.getElementById('resultAmort').value);
-          if(balanceValue > parcValueBalance){
-               resultAmort = balanceValue - parcValueBalance;
-               resultDebt.classList.remove('d-none');
-               document.getElementById('resultAmort').value = resultAmort.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-          }
-          else{
-               alert('Valor da parcela não pode ser maior que o valor da dívida!');
-          }
-}
-
-//OPEN SOLVE DEBT FORM
-btnSolveDebt.onclick = ()=>{
-     solveDebt.classList.remove('d-none');
-     subMenu.classList.add('d-none');
-}
-
-//CLOSE SOLVE DEBT FORM
-btnCancelDebt.onclick = ()=>{
-     solveDebt.classList.add('d-none');
-     backGroundImage.classList.remove('d-none');
-     backGroundTitle.classList.remove('d-none');
-}
-
-
-
-/**========================MÓDULO DESPESAS VEICULARES ============================== */
-
-//OPEN MODAL VEHICULAR AND CLOSE MENU
-btnVehicular.onclick = ()=>{
-     backGroundTitle.classList.add('d-none');
-     backGroundImage.classList.add('d-none');
-     vehicularScreen.classList.remove('d-none');
      buttons.classList.add('d-none');
-}
+});
 
-//CLOSE MODAL VEHICULAR AND OPEN MENU
-btnCancel.onclick = ()=>{
-     backGroundTitle.classList.remove('d-none');
-     backGroundImage.classList.remove('d-none');
-     vehicularScreen.classList.add('d-none');
+//Cadastra uma dívida
+btnSaveDebtForm.addEventListener('click', ()=>{
+     var debt = {
+          creditorName: document.querySelector('#creditorName').value,
+          valueDebt: document.querySelector('#valueDebt').value,
+          dataDebt: document.querySelector('#dataDebt').value,
+          numeroParcelas: document.querySelector('#numeroParcelas').value
+     }
+     db_register_debt.push(debt);
+
+     creditorName.value = '';
+     valueDebt.value = '';
+     dataDebt.value = '';
+     numeroParcelas.value = '';
+
+     console.log(db_register_debt);
+});
+
+//Fecha modal de cadastro de dívida
+btnCloseDebtForm.addEventListener('click', ()=>{
+     debtRegister.classList.add('d-none');
      buttons.classList.remove('d-none');
-}
+});
 
-//SAVE DATAS AND CLOSE MODAL VEHICULAR
-btnSaveVehicularExpenses.onclick = ()=>{
-     vehicularScreen.classList.add('d-none');
-     buttons.classList.remove('d-none');
-     backGroundImage.classList.remove('d-none');
-     backGroundTitle.classList.remove('d-none');
-}
 
-//SAVE DATA OND VEHICULAR MODAL, REQUIRE CONFIRMATION AND REOPEN MENU AND PAGE TITLE
-btnSaveVehicularExpenses.onclick = ()=>{
-     confirmExpense.classList.remove('d-none');
-     vehicularScreen.classList.add('d-none');
-     backGroundTitle.classList.add('d-none');
+//Abre modal de busca de credor
+btnSearchDebt.addEventListener('click', ()=>{
+     title.classList.add('d-none');
      buttons.classList.add('d-none');
-}
+     debtSearch.classList.remove('d-none');
+});
 
-//CLOSE MODAL CONFIRM EXPENSE VEHICULAR
-btnConfirmExpense.onclick = ()=>{
-     confirmExpense.classList.add('d-none');
-     backGroundTitle.classList.remove('d-none');
-     backGroundImage.classList.remove('d-none');
+//Fecha modal de busca de credor
+btnCloseSearchDebt.addEventListener('click', ()=>{
+     title.classList.remove('d-none');
      buttons.classList.remove('d-none');
-}
-
-//PRINT DATAS FROM FORM EXPENSES
-btnPrintVehicularExpenses.onclick = ()=>{
-     vehicularScreen.print();
-}
-
-
-
-
-
-
- 
-
-
-
+     debtSearch.classList.add('d-none');
+});
 
 

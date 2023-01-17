@@ -1,105 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 *{
      box-sizing: border-box;
-     font-family: 'Montserrat', sans-serif;     
+     font-family: 'Quicksand', sans-serif;  
      margin: 0;
      padding: 0;
 }
 
-label{
-     font-size: .9rem;
-}
-
 body{
-     background-color: #f6eded;
-     min-height: 100vh !important;
-     min-width: 100vw !important;
+     width: 100vw;
+     max-height: 100vh;
+     background-color: #305255;
 }
 
-.center{
-     align-items: center;
-     display: flex;
-     justify-content: center;
+.title h1{
+     font-size: 2rem;
 }
 
-.centerRow{
-     align-items: center;
-     display: flex;
-     flex-wrap: nowrap;
-     justify-content: center;
-}
-
-.centerColumn{
-     align-items: center;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: wrap;
-     justify-content: center;
-}
-
-.newGeneral{
-     min-width: 100vw;
-     min-height: 100vh;
-     z-index: 10;
-}
-
-.subMenu{
-     max-width: 60vw !important;
-}
-
-.subMenu img{
-     width: 100%;
-}
-
-.subMenu button{
-     background-color: #57aa86;
-     min-width: 150px;
-}
-
-.subMenuButtons button{
-     min-width: 220px !important;
-}
-
-#btnCloseSubMenu{
-     color: darkred !important;
-     background-color: white !important;
-     border: 1px solid darkred !important;
-}
-
-#btnCloseSubMenu:hover{
-     background-color: darkred !important;
-     color: white !important;
-}
-
-
-.backGroundImage img{
-     min-width: 20%;
-     max-width: 100%;
-}
-
-.subMenuImage img{
-     min-width: 25%;
-     max-width: 60%;
-}
-
-.backGroundTitle h1{
-     color: #57aa86;
-}
-
-.buttons button{
-     background-color: #57aa86;
-     border-radius: 10px !important;
-     cursor: pointer;
-     font-size: 1.25rem !important;
-     min-height: 80px !important;
-     min-width: 250px !important;
-}
-
-#btnClose i{
-    color: lightgrey;
-    cursor: pointer;
-    margin-left: 97%;
+.coverSite{
+     position: absolute;
 }
 
 .vehicular{
@@ -113,12 +32,6 @@ body{
      border-radius: 8px !important;
 }
 
-.debtSearch img{
-     display: block;
-     padding-top: 15px;
-     margin: auto;
-}
-
 .debtStatus span{
      font-family: Arial, Helvetica, sans-serif;
      font-size: 3rem;
@@ -127,7 +40,6 @@ body{
 .confirmExpense, .confirmSearch, .solveDebt, .debtRegister{
      background-color: #7ac7ac;
      border-radius: 10px !important;
-     box-shadow: 3px 6px 9px rgb(167, 163, 163);
 }
 
 .confirmExpenseSuccess{
@@ -147,26 +59,6 @@ body{
 }
 
 
-
-
-
-
-
-
-/*MEDIA QUERIES*/
-@media screen and (min-width: 16rem) and (max-width: 45rem) {
-
-.newGeneral{
-     display: flex;
-     align-items: center;
-     justify-items: center;
-}
-
-.backGroundTitle h1{
-     font-size: 1.25rem;
-}
-
-}
 
 
 
